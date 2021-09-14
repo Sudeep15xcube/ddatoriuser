@@ -1,0 +1,24 @@
+{
+	"userdata":[
+		{
+			"name":"manoj",
+			"email":"manoj@gmail.com"
+		},
+			{
+			"name":"anuj",
+			"email":"anuj@gmail.com"
+		},
+			{
+			"name":"jasmin",
+			"email":"jasmine@gmail.com"
+		},
+			{
+			"name":"yash",
+			"email":"yash@gmail.com"
+		},
+			{
+			"name":"harsh",
+			"email":"harsh@gmail.com"
+		}
+	]
+}

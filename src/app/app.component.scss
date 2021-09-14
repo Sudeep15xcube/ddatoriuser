@@ -1,0 +1,31 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+.alert-warning {
+   
+    background-color: #943ab5;
+    color: #fff;
+  
+}
+.page-nav ngb-pagination {
+    background: red;
+    padding: 20px;
+    width: 100% ;
+     display: block;
+}
+.page-nav ngb-pagination .pagination .page-item.active .page-link {
+   
+    background-color: red;
+    
+}
+.page-nav ngb-pagination .page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #9aac1b;
+    border: 1px solid #dee2e6;
+}
+

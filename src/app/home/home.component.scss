@@ -1,0 +1,22 @@
+section{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+.table-data{
+    background-color:#8b8bf7;
+    padding: 30px 20px;
+    margin: 85px auto;
+    color:white;
+}
+.table-pagination{
+  background:#101113;
+  padding:10px;
+
+}
+.table-pagination ::ng-deep .ngx-pagination .pagination-previous
+ a:not([href]):not([class]), a:not([href]):not([class]):hover {
+
+ color:black;
+    
+}

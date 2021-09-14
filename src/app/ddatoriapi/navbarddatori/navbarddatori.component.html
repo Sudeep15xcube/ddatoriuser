@@ -1,0 +1,19 @@
+
+
+<ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="ddatoriuser">DddatoriUser</a>
+         
+        </li>
+
+        <ul class="navbar-nav" *ngIf ="isAuthenticated">
+          
+           <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="admin">Admin</a>
+          </li>        
+
+       </ul>
+       
+
+ </ul>

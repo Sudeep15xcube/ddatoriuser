@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+
+
+/*html,
+
+body {
+
+height: 100%;
+
+position: relative;
+
+}
+app-root {
+
+min-height: 100%;
+
+display: block;
+
+position: relative;
+
+padding-bottom: 56px; // height of the footer
+
+}*/
+/*.footer {
+
+position: absolute;
+
+bottom: 0;
+
+width: 100%;
+
+}*/
+
+section{
+    margin-top: 70px;
+    margin-bottom:50px;
+}
+
+
+.page-nav ngb-pagination .page-link {
+
+    
+    
+
+
+    color: #fff;
+    background-color: #6e6f6a;
+  
+}
+.page-item.active .page-link {
+  
+    
+    background-color: #0d6efd;
+   
+}
+
+

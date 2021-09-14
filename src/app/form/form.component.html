@@ -1,0 +1,109 @@
+
+
+<!--------------one way binding---ts bind to html---------->
+<div class="box">
+	<div class="container">
+		<div class="col-lg-5 mt-5">
+			<input type="text" class="form-control">
+             <h3>{{book}}</h3>
+		</div>
+		<div class="col-lg-5 mt-5">
+			<input type="text" [value] ="book" class="form-control">
+             <h3>{{book}}</h3>
+		</div>
+	</div>
+</div>
+<!--------------another way binding ,two way binding manually-----html bind to ts-------->
+<div class="box1">
+	<div class="container">
+		
+		<div class="col-lg-5 mt-5">
+			<input type="text" [value] ="school"  (input)="updateInput($event)"  class="form-control">
+             <h3>{{school}}</h3>
+		</div>
+	</div>
+</div>
+<!------------two way binding----automatic----------->
+<div class="box2">
+	<div class="container">
+		
+		<div class="col-lg-5 mt-5">
+			<input type="text" name ="hotel" [(ngModel)]="hotel"   class="form-control">
+             <h3>{{hotel}}</h3>
+		</div>
+	</div>
+</div>
+<!-----------------sms app-------------->
+
+<div class="box3">
+	<div class="container">
+		
+		<div class="col-lg-5 mt-5">
+			
+			<div class="card">
+				<div class="card-header bg-secondar text-white">
+					<p class="h4">SMS APP</p>
+					
+				</div>
+				<div class="card-body bg-light">
+					<form>
+						<textarea  name="messages" [(ngModel)]="messages" [maxlength]="maxcharacter" rows="4" class="form-control" placeholder="your text here.."></textarea>
+					</form>
+					{{messages}}
+				</div>
+				<div class="card-footer">
+					<p class="h4">The character remaining:
+						<span class="fw-bold">{{messages.length}}/{{maxcharacter}}</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<br><br><br>
+<button (click)="getName('anju')">click me</button><!---dynamic data--><br><br><br>
+<button (click)="getData(123, 'abc')">click me</button><br><br><br>
+<button (click)="getElement()">click me</button> <!-- calling function at click -->
+
+<br>
+<br>
+<br>
+<br>
+<input type ="text"  (keyup)="getItems('member')" placeholder="enter event keyup"/>
+<br><br><br>
+<input type ="text"  #field (keyup)="getEmployee(field.value)" placeholder="enter event keyup"/>
+<br><br><br>
+
+<input type ="text"  #field1 (keydown)="getEmployee(field1.value)" placeholder="enter event keydown"/>
+<br><br><br>
+<input type ="text"  #field2 (blur)="getEmployee(field2.value)" placeholder="enter event blur"/>
+<br><br><br>
+
+<input type ="text"  #field3 (input)="getEmployee(field3.value)" placeholder="enter event input"/>
+<br><br><br>
+
+<h1 (mouseover)="getEmployee('anju rani')">please over mouse on text</h1>
+<h1 (mouseleave)="getEmployee('hello anju rani')">please leave mouse from text</h1>
+
+<br><br><br><br><br>
+<input type ="text"  #field4 (keyup)="getYourname(field4.value)" placeholder="enter event keyup"/>
+<h3 class="text-blue">this is input field value:{{Displayyourname}}</h3>
+<br><br><br><br><br>
+
+<input type ="text"  #field5 placeholder="enter event keyup"/>
+<button (click)="getYourname1(field5.value)">click me</button><br><br><br>
+<h3 class="text-blue">this is input field value:{{Display}}</h3>
+
+<button (click)="counter('minus')" class="minus">--</button><br><br><br>
+<p>count:{{count}}</p>
+<button (click)="counter('add')">++</button><br><br><br>
+
+
+
+

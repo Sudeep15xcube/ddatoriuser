@@ -1,0 +1,165 @@
+<!---interpolation/angular expression--->
+<div class="changefont">
+		<p>{{yourname}}</p>
+		<p>{{Firstname}}</p>
+		<p>{{Firstname.toUpperCase()}}</p>
+		<p>{{Firstname.toLowerCase()}}</p>
+		<p>{{Firstname.length}}</p>
+		<div>{{100*20}}</div>
+		<h3>{{getDate()}}</h3>
+		<h3>{{getTime()}}</h3>
+
+		<!----property binding/ attribute binding-->
+		<div >
+			<img [src] = "flowerimage" width="150" height="150" alt="">
+		</div>
+		<h4 class="text-primary">{{updatedtime}}</h4>
+
+		<!---event binding counter example------>
+
+		<p class="h2">{{count}}</p>
+		<button (click)="incrCounter()" class="btn btn-primary">increment</button>
+		<button (click)="decrCounter()" class="btn btn-danger">decrement</button>
+
+		<!---------wish messages-------------->
+		<h3 class="h4 text-danger">{{message}}</h3>
+		<button (click)="SayGood()" class="btn btn-danger">Good Morning</button>
+
+		<br><br>
+		<button (click)="updateMessage('Good Afternoon')" class="btn btn-primary">click me</button>
+		<br><br>
+
+		<!-------------product item------------>
+		<div class="mt-3">
+			<div class="container">
+				<h3 class="text-warning text-center fs-1"> Product Items</h3>
+				<div class="row">
+					<div class="col">
+						<table class="table table-hover text-center table-striped">
+							<thead class="bg-secondary text-white">
+								<tr>
+									<th>Sno.</th>
+									<th>Image</th>
+									<th>Name</th>
+									<th>Price</th>
+									<th>Qty</th>
+									<th>Total</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>{{product.sno}}</td>
+									<td><img [src]="product.image" width="100" height="100" alt=""></td>
+									<td>{{product.name}}</td>
+									<td>{{product.price}}</td>
+									<td><i (click)="minusQty()" class="fas fa-minus-circle fa-2x"></i>{{product.qty}}<i (click)="addQty()" class="fas fa-plus-circle fa-2x"></i></td>
+									
+									<td>{{product.price*product.qty}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+         </div>
+			<!-------------------------shopping cart-------------------->
+             <div class="mt-3">
+			<div class="container">
+				<h3 class="text-warning text-center fs-1"> Shopping Cart</h3>
+				<div class="row">
+					<div class="col">
+						<table class="table table-hover text-center table-striped">
+							<thead class="bg-secondary text-white">
+								<tr >
+									<th>Elementid.</th>
+									<th>Elementpicture</th>
+									<th>Elementname</th>
+									<th>Elementprice</th>
+									<th>Elementqty</th>
+									<th>Elementtotal</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor = "let elements of element">
+									<td>{{elements.id}}</td>
+									<td><img [src]="elements.elementpicture" width="100" height="100" alt=""></td>
+									<td>{{elements.elementname}}</td>
+									<td>{{elements.elementprice  | currency:'INR'}}</td>
+									<td><i  (click)="subQty(elements.id)" class="fas fa-minus-circle fa-2x"></i>{{elements.elementqty}}<i (click)="plusQty(elements.id)" class="fas fa-plus-circle fa-2x"></i></td>
+									
+									<td>{{elements.elementprice*elements.elementqty | currency:'INR'}}</td>
+								</tr>
+								<tr>
+									<td colspan="4"></td>
+									<td>Grand Total</td>
+									<td>{{calcGrandTotal() | currency:'INR'}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+         </div>
+			<!-----------------------//shoping cart-------------->
+
+			<!------------if else ngIf directives---------->
+			<h1 *ngIf="show" >learning</h1>
+
+
+                       <!-------if else conditions------->
+			<h2 *ngIf="display else bb1" class="text-success">true condition happy learning</h2>
+
+
+            <ng-template #bb1>
+            	<h3>False conditions so sad no learning</h3>
+            </ng-template>
+
+                     <!-------------if else conditions-------->
+
+            <h5 *ngIf="shown else bb2">{{10+5}}</h5>
+
+            <ng-template #bb2>
+            	<h5>{{10*7}}</h5>
+            </ng-template>
+
+                     <!---------if else conditions------------->
+               <h1 *ngIf="view; then bb3 else bb4"></h1>
+ 
+  
+              <ng-template #bb3>
+              	<p class="text-primary fs-4">this is angular12</p>
+              </ng-template>
+                
+                <ng-template #bb4>
+              	<p class="text-danger fs-1">this is not an angular12</p>
+              </ng-template>
+
+              <!------------if else conditions---------->
+               <h1 *ngIf="see==='back'; then bb5 else bb6"></h1>
+ 
+  
+              <ng-template #bb5>
+              	<p class="text-primary fs-4">Im a front end developer in angular12</p>
+              </ng-template>
+                
+                <ng-template #bb6>
+              	<p class="text-danger fs-1">Im a backened developer in angular12</p>
+              </ng-template>
+
+
+              <!----------   else if conditions------------>
+             
+          
+  
+              <ng-template [ngIf]="color==='red' ">
+              	<p class="text-danger fs-4">I'm Red</p>
+              </ng-template>
+               <ng-template [ngIf]="color==='yellow' ">
+              	<p class="text-warning fs-4">I'm Yellow</p>
+              </ng-template>
+              <ng-template [ngIf]="color==='blue' ">
+              	<p class="text-danger fs-4">I'm Blue</p>
+              </ng-template>
+                
+               
+</div>

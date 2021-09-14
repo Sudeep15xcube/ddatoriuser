@@ -1,0 +1,44 @@
+
+<ul class="navbar-nav">
+        <li class="nav-item" *ngIf="!isAuthenticated">
+          <a class="nav-link" routerLinkActive="active" routerLink="auth">Authenticate</a> 
+        </li>
+         <li class="nav-item" *ngIf="isAuthenticated">
+          <a class="nav-link" href="#" routerLinkActive="active" (click)="onLogout($event)">LogOut
+          </a> 
+        </li>
+         
+        
+    <!--      <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="login">Login</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="dashboard">Dashboard</a> 
+        </li> -->
+        <ul class="navbar-nav" *ngIf ="isAuthenticated">
+    
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  routerLink="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="form">Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="tables">Tables</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" routerLink="tabledata">TablesData</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="employee">EmployeeData</a>
+       
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="databinding">DataBinding</a>
+         
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="posts">Post</a>
+        </li>
+ </ul>
+      </ul>

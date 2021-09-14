@@ -1,0 +1,165 @@
+
+<p>
+  <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+    aria-controls="collapseExample">
+    Toggle
+  </button>
+</p>
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+  <div class="card">
+    <div class="card-body">
+      You can collapse this card by clicking Toggle
+    </div>
+  </div>
+</div>
+<!-------------table----------------------->
+<section class="table-data">
+    <div class="container">
+		
+	    <h1 class="text-center text-white py-5 fw-bold">JobData Table</h1>
+
+		        <form>
+				  <div class="mb-3">
+				    <label for="exampleInputEmail1" class="form-label">Search</label>
+				    <input type="text" name="terms" [(ngModel)]="terms" class="form-control" placeholder="Search here....." >
+				  </div>
+				</form>
+
+		    <div class="table-responsive">
+				<table class="table table-dark table-striped table-hover">
+					  <thead>
+					  <tr>
+					    <th>id</th>
+					    <th scope="col">name</th>
+					    <th scope="col">email</th>
+					    <th scope="col">phone</th>
+					    <th scope="col">username</th>
+					    <th scope="col">Website</th>
+					    <th scope="col">company</th>
+					    <th scope="col">Address</th>
+					   
+					  </tr>
+					  </thead>
+					  <tbody>
+					    <tr *ngFor="let jobdata of jobb | filter:terms | paginate: {itemsPerPage:5,currentPage:p};">
+					    <td>{{jobdata.id}}</td>
+					    <td>{{jobdata.name}}</td>
+					    <td>{{jobdata.email}}</td>
+					    <td>{{jobdata.phone}}</td>
+					    <td>{{jobdata.username}}</td>
+					    <td>{{jobdata.website}}</td>
+					    <td>{{jobdata.company.name}},{{jobdata.company.bs}}</td>
+					    <td>{{jobdata.address.street}},{{jobdata.address.city}}-{{jobdata.address.zipcode}}</td>
+					  </tr>
+					  </tbody>
+				</table>
+		    </div>
+		    <div class="table-pagination">
+		    	<pagination-controls (pageChange) = "p = $event" ></pagination-controls>
+		    </div>
+	</div>
+</section>
+
+
+
+<!-----------------boostrap card ---------------------->
+<section class="card1">
+	<div class="container ">
+	<div class="row justify-content-center">
+		<div class="col-lg-4 col-md-4 col-sm-12 p-2">
+			<div class="card">
+	  
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+		       </div>
+    		</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 p-2">
+			<div class="card">
+	  
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+		       </div>
+    		</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 p-2">
+			<div class="card">
+	  
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+		       </div>
+    		</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 p-2">
+			<div class="card">
+	  
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+		       </div>
+    		</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 p-2">
+			<div class="card">
+	  
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+		       </div>
+    		</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 p-2">
+			<div class="card">
+	  
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+		       </div>
+    		</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 p-2">
+			<div class="card">
+	  
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+		       </div>
+    		</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 p-2">
+			<div class="card">
+	  
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+		       </div>
+    		</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 p-2">
+			<div class="card">
+	  
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+		       </div>
+    		</div>
+		</div>
+
+	</div>
+</div>
+</section>
+
+
+
