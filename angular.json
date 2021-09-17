@@ -42,13 +42,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",//500kb
+                  "maximumError": "5mb" //1mb
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "1mb",//2kb
+                  "maximumError": "4mb" //4kb
                 }
               ],
               "fileReplacements": [
@@ -79,6 +79,11 @@
             "development": {
               "browserTarget": "Angular12withSCSS:build:development"
             }
+          },
+          "options": {
+            "browserTarget": "Angular12withSCSS:build",
+            "port": 80,
+            "host": "my-custom-domain.com"
           },
           "defaultConfiguration": "development"
         },
